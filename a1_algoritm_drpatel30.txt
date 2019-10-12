@@ -1,0 +1,51 @@
+
+--> take the date and number of days from user as an run level argument
+--> Check the length of the first argument to make sure that the date entered is in correct format.
+--> check if correct number of argument is entered.
+--> decide if --step is used or not.
+--> store the string input(from the argument) into a variable.
+--> Split the string from the marker('/' in our case)
+--> store the day, month and year into appropriate variable and convert them into integer.
+--> store the days in to appropriate variable.
+--> check if the days , month values do not exceed appropriate value and return appropriate
+    error message or display Usage message.
+--> check if the year is leap year or not.
+--> store max days of months after checking leap year(i.e. february has 29 days in leap year)
+--> create a funtion to return 1 day after the date entered
+    --> check if date is valid.
+    --> store values of days month and year to use in the function
+    --> increse the day by one
+    --> check if it exceeds the maximum days for the given month or not
+    --> if yes: increase month by one
+    --> set date to 1(i.e. start of a new month)
+    --> check if the month does not exceed 12 (max number of months in a year)
+        --> if yes: increase year by one:
+        --> set the month to 1 (i.e. start of the new year)
+    --> if not: month and year stays same
+    --> join the days month and year by converting them to string and padding necessary zeros
+    --> return the caculated value for next day obtained from above step
+--> Create a function to return 1 day before the date entered
+    -->check if date is valid.
+    --> store values of days month and year to use in the function
+    --> decrese the day by one
+    --> check if date is not zero(i.e. lowest possible value 1 has reached)
+    --> if date is zero decrease the month by 1
+    --> check if the month is not zero(i.e. lowest possible value 1 has reached)
+        --> if the month is zero set the month to 12 (max month for previous year)
+        --> decrease year by one(previous year)
+        --> if the month is not zero year stays same
+        --> set the days accordingly
+            (if the date goes below zero month should decrease and if the month goes below year decrease)
+        --> if the month is not zero do not change month and year 
+    --> join the days month and year by converting them to string and padding necessary zeros
+    --> return the caculated value for next day obtained from above step
+--> create a function to iterate accordingly the arguments
+--> if 4 arguments entered (i.e. -- step  option is provided) run a loop to repeat the 
+    after or before function depending on the positive or negative days' argument
+    and print just the final outcome.
+--> if 3 arguments entered (i.e. -- step is not provided) run a loop to repeat the 
+    after or before function depending on the positive or negative days' argument 
+    and print every ieration to provide stepped output
+
+--> create if __name__ == "__main__": condition prevent the usage of whole file while 
+    being imported
